@@ -15,7 +15,8 @@ Vagrant.configure(2) do |config|
     node1.vm.provider "virtualbox" do |v|
   		v.memory = 512
   		v.cpus = 1
-	end
+    end
+  end
 
   config.vm.define "node2" do |node2|
     node2.vm.box = "bento/ubuntu-16.04"
@@ -25,7 +26,8 @@ Vagrant.configure(2) do |config|
     node2.vm.provider "virtualbox" do |v|
   		v.memory = 512
   		v.cpus = 1
-	end
+    end
+  end
 
   config.vm.define "master", primary: true do |master|
     master.vm.hostname = 'master'
@@ -35,6 +37,7 @@ Vagrant.configure(2) do |config|
     master.vm.provider "virtualbox" do |v|
   		v.memory = 512
   		v.cpus = 1
-	end
+    end
+  end
 
 end
